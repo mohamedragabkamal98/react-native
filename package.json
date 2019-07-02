@@ -1,9 +1,9 @@
 {
-  "name": "Tab_Task",
+  "name": "chatapp",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "start": "node server.js start",
     "test": "jest"
   },
   "dependencies": {
