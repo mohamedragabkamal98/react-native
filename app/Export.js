@@ -8,7 +8,7 @@ export default class Export extends Component {
 
   render() {
     return(
-        <View style={{backgroundColor:'white',height:200,width:120,marginLeft:10,borderWidth:2,borderColor:'red',borderRadius: 10,paddingTop:10,}}>
+        <View style={{backgroundColor:'white',height:200,width:120,marginLeft:10,borderWidth:2,borderColor:'red',borderRadius: 10,paddingTop:5,}}>
           <View style={{flex:2,paddingLeft:30}}>
               <Image
               source={this.props.imageUri}
@@ -25,7 +25,7 @@ export default class Export extends Component {
                 marginLeft:10,
             }}/>
           </View>
-          <View style={{flex:0.5,paddingRight:30,paddingTop:10}}>
+          <View style={{flex:0.5,paddingRight:30,paddingTop:5}}>
              <Text>{this.props.nameofitem}</Text>
           </View>
           <View style={{flex:0.5,flexDirection: 'row'}}>

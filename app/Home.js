@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Image, Button, TouchableOpacity, ScrollView } from 'react-native';
+import { Platform,Dimensions, StyleSheet, Text, View, Image, Button, TouchableOpacity, ScrollView } from 'react-native';
 import { DrawerItems, SafeAreaView } from 'react-navigation';
 import Slideshow from 'react-native-image-slider-show';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Export from './Export'
 import Exportv from './Exportv';
+import FlatListTest from './FlatListTest';
+import FlatListTest1 from './FlatListTest1';
 export default class LoginForm extends Component {
     static navigationOptions = ({ navigation }) => ({
         title: "Home",
@@ -54,9 +56,7 @@ export default class LoginForm extends Component {
     render() {
         return (
             <View style={styles.view} >
-                <ScrollView
-                    showsVerticalScrollIndicator={false}
-                >
+                
                     <View style={{ flexDirection: 'row', }}>
                         <Icon
                             name='shopping-cart'
@@ -66,7 +66,7 @@ export default class LoginForm extends Component {
                             style=
                             {{
                                 marginLeft: 10,
-                                marginTop: 20,
+                                marginTop: 10,
                             }}
 
                         />
@@ -75,7 +75,7 @@ export default class LoginForm extends Component {
                                 color: '#517fa4',
                                 fontSize: 30,
                                 fontWeight: 'bold',
-                                marginTop: 15,
+                                marginTop: 5,
                                 marginLeft: 95,
                             }}>
                             Market
@@ -89,7 +89,7 @@ export default class LoginForm extends Component {
                             style=
                             {{
                                 marginLeft: 85,
-                                marginTop: 20,
+                                marginTop: 10,
                             }}
                             onPress={() => this.props.navigation.openDrawer('')}
                         />
@@ -100,11 +100,11 @@ export default class LoginForm extends Component {
                             dataSource={this.state.dataSource}
                             position={this.state.position}
                             onPositionChanged={position => this.setState({ position })}
-                            height={150}
+                            height={120}
                             arrowSize={0}
                         />
                     </View>
-                    <View style={{ flexDirection: 'row', paddingTop: 20 }}>
+                    <View style={{ flexDirection: 'row', paddingTop: 10 }}>
 
                         <TouchableOpacity style={{ marginLeft: 10 }}>
                             <Text style={styles.btnText}>
@@ -138,8 +138,8 @@ export default class LoginForm extends Component {
                         </Text>
                     </View>
                     <View style={{ padding: 10, backgroundColor: '#E6E6E6', paddingRight: 0 }}>
-
-                        <ScrollView
+                        <FlatListTest1/>
+{/*                       <ScrollView
                             horizontal={true}
                             showsHorizontalScrollIndicator={false}
                         >
@@ -179,10 +179,11 @@ export default class LoginForm extends Component {
                                 priceofitem="10"
                                 ppriceofitem="20"
                             />
-                        </ScrollView>
+                        </ScrollView> */}
+ 
                     </View>
 
-                    <View style={{ flexDirection: 'row', paddingTop: 25 }}>
+                    <View style={{ flexDirection: 'row', paddingTop: 10 }}>
 
                         <TouchableOpacity style={{ marginLeft: 10 }}>
                             <Text style={styles.btnText}>
@@ -215,8 +216,8 @@ export default class LoginForm extends Component {
 
                         </Text>
                     </View>
-                    <View style={{ paddingTop: 20 }}>
-
+                    <View style={{ paddingTop: 5 }}>
+                       {/*
                         <ScrollView
                             showsVerticalScrollIndicator={false}
                             alwaysBounceVertical={true}
@@ -245,9 +246,10 @@ export default class LoginForm extends Component {
                                 price="15"
                                 imageUri={require('../image/oreo.jpg')}
                             />
-                        </ScrollView>
+                        </ScrollView>*/ }
+                        <FlatListTest />
                     </View>
-                </ScrollView>
+                
             </View>
         );
     }
