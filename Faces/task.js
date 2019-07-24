@@ -2,7 +2,10 @@ import React from 'react';
 import { Text, View,StyleSheet,Image,Button } from 'react-native';
 import { DrawerNavigator, createDrawerNavigator,createAppContainer } from 'react-navigation';
 import Home from '../app/Home';
-import LoginForm from '../app/LoginForm';
+import Export from '../app/Export';
+
+import Details from '../app/Details';
+import LoginForm from '../app/LoginForm'
 import { Right } from 'native-base';
 
   /*
@@ -45,11 +48,24 @@ import { Right } from 'native-base';
         alignItems:'center',
       },
     
-    }
+    },
+    Details:
+    {
+      screen: Details,
+    },
+    Export:
+    {
+     screen: Export,
+    },
+    LoginForm:
+    {
+     screen: LoginForm,
+    },
     
   },
   {
     drawerPosition: 'right',
   }
   );
+  
   export default createAppContainer(MyDrawerNavigator);

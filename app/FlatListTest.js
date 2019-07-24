@@ -17,10 +17,7 @@ constructor(props){
             { name:"اوريو",type:"تسالي",price:"15",imageUri:require('../image/oreo.jpg')},
             { name:"اوريو",type:"تسالي",price:"15",imageUri:require('../image/oreo.jpg')},
             { name:"اوريو",type:"تسالي",price:"15",imageUri:require('../image/oreo.jpg')},
-      
-
-
-        ]
+       ]
     }
 }
     // _sendData(){
@@ -34,7 +31,8 @@ constructor(props){
                 <FlatList
                 showsVerticalScrollIndicator={false}
                     data={this.state.data}
-                    style={{height:height*0.40}}
+                    alwaysBounceVertical={true}
+                    style={{height:height*0.50}}
                     renderItem={({ item }) =>
                    {return (
                        

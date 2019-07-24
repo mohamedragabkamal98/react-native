@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, FlatList,List,Dimensions,ScrollView ,TouchableHighlight} from 'react-native';
-import Export from './Export';
+import ExportD from './ExportD';
 
 
 export default class FlatListTest extends Component {
@@ -32,15 +32,11 @@ constructor(props){
                 showsHorizontalScrollIndicator={false}
                     horizontal
                     data={this.state.data}
-                    
+                    style={{paddingLeft:50}}
                     renderItem={({ item }) =>
                    {return (
-                    <Export
+                    <ExportD
                     imageUri={item.imageUri}
-                    nameofitem={item.nameofitem}
-                    priceofitem={item.priceofitem}
-                    ppriceofitem={item.ppriceofitem}
-                    navigation={this.props.navigation}
                 />
                     );
                 }
